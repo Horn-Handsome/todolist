@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!--引入css文件样式-->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<!--定义为移动端的页面-->
+		<meta name="viewport" content="width=375,user-scalable=no" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">ToDoList</div>
+			<div class="input">
+				<input type="text" name="write" id="write" placeholder="请输入待办事项" value="" />
+			</div>
+		</div>
+		<!--.main+tab键生成-->
+		<div class="main">
+			<!--.list.todo+tab键生成-->
+			<div class="list todo">
+				<h1>
+				 <!--div*2 +tab键 生成以下两个div-->
+					<span class="title">正在进行</span>
+					<span class="num">0</span>
+				</h1>
+				<div class="ctlist">
+					<div class="item">
+						<!--复选框-->
+						<span class="checkbox">
+							<input type="checkbox" name="check" value="" />
+						</span>
+						<!--content 意为内容-->
+						<span class="content">
+							写代码
+						</span>
+						<span class="delete"></span>
+						
+					</div>
+				</div>
+			</div>
+			<div class="list done">
+				<h1>
+				 <!--div*2 +tab键 生成以下两个div-->
+					<span class="title">已经完成</span>
+					<span class="num">0</span>
+				</h1>
+				<div class="ctlist"></div>
+			</div>
+		</div>
+		
+		<script src="js/todo.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,134 @@
+*{/*初始化操作*/
+	/*去除当前页面的所有默认的边距*/
+	margin: 0;
+	padding: 0;
+	/*定义盒子模型:设置元素的宽度不会因为设置padding/border而改变*/
+	box-sizing: border-box;
+}
+body{
+	width: 375px;
+	background: #efefef;
+}
+/*头部样式*/
+.header{
+	width: 375px;
+	height: 50px;
+	/*背景颜色,透明度设置*/
+	background: rgba(47,47,47,0.98);
+	/*定义设置header为弹性容器/元素,即限显示为弹性布局*/
+	display: flex;
+}
+.header .logo{
+	color: #fff;
+	width: 100px;
+	/*设置文字居中*/
+	text-align: center;
+	/*设置文字的行高*/
+	line-height: 50px;
+	/*设置文字字体大小*/
+	font-size: 20px;
+}
+.header .input{
+	color: #fff;
+	width: 275px;
+	/*定义设置header为弹性容器/元素,即显示为弹性布局,子元素居中*/
+	display: flex;
+	/*弹性子元素主轴居中*/
+	justify-content: center;
+	/*弹性子元素侧轴居中*/
+	align-items: center;
+}
+.header .input input{
+	border: none;
+/*绘制于元素周围的一条线,在边框边缘外围,即轮廓的设置*/
+	outline: none;
+	width: 250px;
+	height: 30px;
+	border-radius: 5px;
+	/*内边距上下为0,左右边距20px*/
+	padding: 0 20px;
+}
+
+/*直接子元素的选择器的写法*/
+.list>h1{
+	margin: 20px;
+	font-size: 24px;
+	/*定义设置。list>h1为弹性容器,即显示为弹性布局样式*/
+	display: flex;
+	/*两边没有行间距*/
+	justify-content: space-between;
+}
+
+.todo>h1 .num{
+	width: auto;
+	padding: 0 10px;
+	height: 25px;
+	background: red;
+	border-radius: 20px;
+	color: #FFFFFF;
+	font-size: 14px;
+	text-align: center;
+	line-height: 25px;
+}
+.done>h1 .num{
+	width: auto;
+	padding: 0 10px;
+	height: 25px;
+	background: deepskyblue;
+	border-radius: 20px;
+	color: #FFFFFF;
+	font-size: 14px;
+	text-align: center;
+	line-height: 25px;
+}
+.item{
+	/*外边距*/
+	margin: 5px 20px;
+	display: flex;
+	align-content: space-between;
+	align-items: center;
+	background: #FFFFFF;
+	border-radius: 5px;
+	padding: 5px 13px;
+	position: relative;
+}
+/*伪元素*/
+.item:before{
+	content: "";
+	width: 6px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: greenyellow;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	
+}
+.item .checkbox{
+	display: flex;
+	align-items: center;
+}
+.item .checkbox input{
+	width: 22px;
+	height: 22px;
+	outline: none;
+	
+}
+.item .content{
+	width: 270px;
+	padding: 0 10px;
+	line-height: 22px;
+}
+.item .delete{
+	width: 22px;
+	height: 22px;
+	background-image: url(../img/shanchu.png);
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;	
+}
+.main{
+	width: 375px;
+}
+
